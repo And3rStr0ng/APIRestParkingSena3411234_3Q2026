@@ -4,8 +4,6 @@ import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -24,13 +22,12 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name = "vehiculos")
+@Table(name = "registros")
 public class Registro {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
-	private Long idRegistrp;
-	@Enumerated(EnumType.STRING)
+	private Long idRegistro;
 	@Column(nullable = false)
 	private LocalDateTime fechahoraIngreso;
 	private LocalDateTime fechahoraSalida;
